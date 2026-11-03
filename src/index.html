@@ -7,6 +7,10 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
     <title>Proyecto Web</title>
     <link rel="stylesheet" href="css/estilos.css" />
   </head>
@@ -18,7 +22,7 @@
           <li>
             <a href="index.html" class="activo" aria-current="page">Inicio</a>
           </li>
-          <li><a href="pagina.html">Pagina1</a></li>
+          <li><a href="/src/historia.html">Historia</a></li>
         </ul>
 
         <div class="logo">Videojuegos</div>
@@ -35,7 +39,104 @@
     </header>
 
     <main>
-      <!-- Contenido de la página -->
+      <!-- Hero / Banner Principal -->
+      <section class="hero-section">
+        <div class="hero-content">
+          <h1>CSSnippets</h1>
+          <p>
+            A passionate developer sharing CSS insights,<br />
+            evolving Hollow Knight and manestum.
+          </p>
+          <a href="#" class="btn-hero">Comenzar</a>
+        </div>
+      </section>
+
+      <!-- Contenedor Principal en Cuadrícula (2 columnas) -->
+      <section class="main-grid-container">
+        <!-- Columna Izquierda: Nuevos Recursos -->
+        <div class="recursos-section">
+          <h2>Recursos</h2>
+          <div class="cards-grid">
+            <!-- Tarjeta 1 -->
+            <article class="tarjeta">
+              <img
+                src="/src/IMG/Historia Hollow Knight.jpg"
+                alt="Vista previa del primer recurso CSS"
+                loading="lazy"
+              />
+              <h3>Historia</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipiscing elit, sed do
+                eiusmod tempor...
+              </p>
+              <a href="#" class="card-link">Explorar más</a>
+            </article>
+
+            <!-- Tarjeta 2 -->
+            <article class="tarjeta">
+              <img
+                src="/src/IMG/Lenguajes-Motores Hollow Knight.jpg"
+                alt="Vista previa del segundo recurso CSS"
+                loading="lazy"
+              />
+              <h3>Herramientas</h3>
+              <p>
+                Varona gente conecqui champi sed neo-barroca adipiscing elite,
+                sed nonumai tempor...
+              </p>
+              <a href="#" class="card-link">Explorar más</a>
+            </article>
+          </div>
+        </div>
+
+        <!-- Columna Derecha: Reseña del Creador -->
+        <aside class="creator-aside">
+          <h2>Reseña del Creador</h2>
+          <div class="creator-card">
+            <img
+              src="/src/IMG/Hollow Knight Avatar.jpg"
+              alt="Avatar del creador de la plataforma"
+              class="creator-avatar"
+              loading="lazy"
+            />
+            <p>A passionate developer sharing CSS insights</p>
+
+            <!-- Contenedor unificado de redes sociales -->
+            <div class="social-container">
+              <a
+                href="https://github.com"
+                target="_blank"
+                rel="noopener"
+                aria-label="GitHub"
+                class="social-link"
+              >
+                <i class="fa-brands fa-github"></i>
+                <span class="sr-only">GitHub</span>
+              </a>
+              <a
+                href="https://portal.utp.ac.pa"
+                target="_blank"
+                rel="noopener"
+                aria-label="Cuenta UTP"
+                class="social-link"
+              >
+                <i class="fa-solid fa-graduation-cap"></i>
+                <span class="sr-only">Cuenta UTP</span>
+              </a>
+              <a
+                href="https://www.playstation.com"
+                target="_blank"
+                rel="noopener"
+                aria-label="PlayStation"
+                class="social-link"
+              >
+                <i class="fa-solid fa-gamepad"></i>
+                <span class="sr-only">PlayStation</span>
+              </a>
+            </div>
+          </div>
+        </aside>
+      </section>
     </main>
 
     <footer>
@@ -68,8 +169,40 @@
         </div>
 
         <div class="footer-section">
-          <h3>ENlaces de mis redes</h3>
-          <p><a href="#">GitHub</a> | <a href="#">Cuenta de UTP</a></p>
+          <h3>Mis Redes</h3>
+          <!-- Reutilizamos la misma clase social-container -->
+          <div class="social-container">
+            <a
+              href="https://github.com"
+              target="_blank"
+              rel="noopener"
+              aria-label="GitHub"
+              class="social-link"
+            >
+              <i class="fa-brands fa-github"></i>
+              <span class="sr-only">GitHub</span>
+            </a>
+            <a
+              href="https://portal.utp.ac.pa"
+              target="_blank"
+              rel="noopener"
+              aria-label="Cuenta UTP"
+              class="social-link"
+            >
+              <i class="fa-solid fa-graduation-cap"></i>
+              <span class="sr-only">Cuenta UTP</span>
+            </a>
+            <a
+              href="https://www.playstation.com"
+              target="_blank"
+              rel="noopener"
+              aria-label="PlayStation"
+              class="social-link"
+            >
+              <i class="fa-solid fa-gamepad"></i>
+              <span class="sr-only">PlayStation</span>
+            </a>
+          </div>
         </div>
       </div>
 
