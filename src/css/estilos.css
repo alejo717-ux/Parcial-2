@@ -363,11 +363,171 @@ footer::before {
 	display: none;
 }
 
+/* PAGINA INTRODUCTORIA */
+.intro-hero.with-bg,
+.cta-section.with-bg {
+	position: relative;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	padding: 8.5rem 10%;
+}
+
+.intro-hero.with-bg {
+	margin-top: -70px;
+	background-image: url("/src/IMG/intro\ background.png");
+}
+
+.cta-section.with-bg {
+	background-image: url("/src/IMG/Images-Gaming-Backgrounds-HD.jpg");
+}
+
+.intro-hero.with-bg::before,
+.cta-section.with-bg::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	background: rgba(11, 17, 32, 0.29);
+	z-index: 0;
+}
+
+.intro-hero.with-bg > *,
+.cta-section.with-bg > * {
+	position: relative;
+	z-index: 1;
+}
+
+.intro-hero {
+	padding: 10rem 10% 10rem;
+	text-align: left;
+}
+
+.intro-hero-content {
+	max-width: 620px;
+}
+
+.intro-hero-content h1 {
+	font-size: clamp(2rem, 4vw, 3rem);
+	color: #38bdf8;
+	margin-bottom: 1rem;
+	text-shadow: 0 0 20px rgba(56, 189, 248, 0.45);
+}
+
+.intro-hero-content p {
+	font-size: 1.05rem;
+	color: #cbd5e1;
+	line-height: 1.7;
+}
+
+.doc-section {
+	padding: 4rem 10%;
+	background: rgba(15, 23, 42, 0.2);
+	border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.doc-container {
+	max-width: 1100px;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 3.5rem;
+	align-items: center;
+}
+
+.alt-layout .doc-container {
+	grid-template-columns: 1fr 1fr;
+}
+
+.doc-image img {
+	width: 100%;
+	height: 260px;
+	object-fit: cover;
+	border-radius: 16px;
+	border: 2.7px solid rgba(255, 255, 255, 0.12);
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.9);
+}
+
+.doc-text h2 {
+	font-size: 1.8rem;
+	color: #ffffff;
+	margin-bottom: 1rem;
+	font-weight: 600;
+}
+
+.doc-text p {
+	font-size: 1rem;
+	color: #cbd5e1;
+	line-height: 1.7;
+}
+
+.cta-section {
+	padding: 5rem 10%;
+	text-align: center;
+	background: linear-gradient(
+		135deg,
+		rgba(56, 189, 248, 0.1) 0%,
+		rgba(11, 17, 32, 0.6) 100%
+	);
+	border-top: 1px solid rgba(56, 189, 248, 0.2);
+}
+
+.cta-content {
+	max-width: 700px;
+	margin: 0 auto;
+}
+
+.cta-content h2 {
+	font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+	color: #ffffff;
+	margin-bottom: 1rem;
+}
+
+.cta-content p {
+	font-size: 1.05rem;
+	color: #94a3b8;
+	margin-bottom: 2rem;
+	line-height: 1.6;
+}
+
+.cta-buttons {
+	display: flex;
+	justify-content: center;
+	gap: 1.5rem;
+	flex-wrap: wrap; /*PENDIENTE*/
+}
+
+.cta-secondary {
+	background: transparent;
+	color: #38bdf8;
+	border: 2px solid #38bdf8;
+	box-shadow: 0 0 15px rgba(56, 189, 248, 0.2);
+}
+
+.cta-secondary:hover {
+	background: rgba(56, 189, 248, 0.15);
+	color: #ffffff;
+	box-shadow: 0 0 25px rgba(56, 189, 248, 0.4);
+}
+
+@media (max-width: 900px) {
+	.doc-container,
+	.alt-layout .doc-container {
+		grid-template-columns: 1fr;
+		gap: 2rem;
+	}
+
+	.alt-layout .doc-image {
+		order: -1;
+	}
+}
+
 /* Creamos una clase solamente para meter la imagen de fondo*/
 body.page-historia {
 	background-image: url(/src/ANIMATION/Hollow\ Knight\ Animacion.gif);
 	background-position: center;
 	background-attachment: fixed;
+	background-size: cover;
+	position: relative;
 }
 
 body.page-historia::before {
@@ -479,6 +639,27 @@ body.page-historia > * {
 }
 
 /* Seccion de los lenguajes y motores*/
+body.page-herramientas {
+	background-image: url("/src/ANIMATION/hollow-knight-animation2.gif");
+	background-position: center;
+	background-attachment: fixed;
+	background-size: cover;
+	position: relative;
+}
+
+body.page-herramientas::before {
+	content: "";
+	position: fixed;
+	inset: 0;
+	background: rgba(21, 3, 33, 0.75);
+	z-index: 0;
+}
+
+body.page-herramientas > * {
+	position: relative;
+	z-index: 1;
+}
+
 .hall-section {
 	padding: 4rem 5% 5rem;
 	max-width: 1700px;
@@ -537,6 +718,7 @@ body.page-historia > * {
 	text-shadow: 0 0 25px #0aa9f3;
 }
 
+/*LA PAGINA DE MI PERSONA*/
 .creator-hero-section {
 	padding: 6rem 10% 4rem;
 	max-width: 1400px;
@@ -584,37 +766,21 @@ body.page-historia > * {
 	align-items: center;
 }
 
-.glowing-circle-bg {
-	width: 280px;
-	height: 420px;
-	border-radius: 50%;
-	background: radial-gradient(
-		circle,
-		rgba(56, 189, 248, 0.25) 0%,
-		rgba(11, 17, 32, 0) 70%
-	);
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	box-shadow: 0 0 60px rgba(56, 189, 248, 0.15);
-	border: 1px solid rgba(56, 189, 248, 0.3);
-}
-
 .creator-main-avatar {
 	width: 279px;
 	height: 419px;
 	border-radius: 50%;
 	object-fit: cover;
 	border: 3px solid #38bdf8;
-	box-shadow: 0 0 25px rgba(56, 189, 248, 0.5);
-	transition: transform 0.3s ease;
-}
-
-.creator-main-avatar {
+	box-shadow: 0 0 20px rgba(56, 189, 248, 0.4);
+	transition:
+		transform 0.5s ease,
+		box-shadow 0.5s ease;
 }
 
 .creator-main-avatar:hover {
 	transform: scale(1.07);
+	box-shadow: 0 0 30px rgba(56, 189, 248, 0.7);
 }
 
 .project-resources-section {
