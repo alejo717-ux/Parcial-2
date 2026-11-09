@@ -995,18 +995,4 @@ html {
 			opacity: 0;
 		}
 	}
-
-	/* Transiciones de elementos específicos */
-	.creator-main-avatar {
-		view-transition-name: avatar-perfil;
-	}
-
-	.tarjeta {
-		view-transition-name: tarjeta-efecto;
-	}
-
-	::view-transition-group(avatar-perfil),
-	::view-transition-group(tarjeta-efecto) {
-		animation-duration: 0.4s;
-	}
 }
