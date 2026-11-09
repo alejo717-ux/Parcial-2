@@ -1,215 +1,245 @@
 <!doctype html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-    <title>Proyecto Web</title>
-    <link rel="stylesheet" href="css/estilos.css" />
-  </head>
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link
+         href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+         rel="stylesheet"
+      />
+      <link
+         rel="stylesheet"
+         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      />
+      <title>Proyecto Web</title>
+      <link rel="stylesheet" href="css/estilos.css" />
+   </head>
 
-  <body>
-    <header>
-      <nav>
-        <ul class="nav-links">
-          <li>
-            <a href="index.html" class="activo" aria-current="page">Inicio</a>
-          </li>
-          <li><a href="/src/historia.html">Historia</a></li>
-        </ul>
-
-        <div class="logo">Videojuegos</div>
-
-        <ul class="nav-links">
-          <li><a href="pagina2.html">Pagina2</a></li>
-          <li><a href="pagina3.html">Pagina3</a></li>
-          <li><a href="introduccion.html">Pagina4</a></li>
-        </ul>
-
-        <div class="btns">
-          <button class="btn">Yo</button>
-        </div>
-      </nav>
-    </header>
-
-    <main>
-      <!-- Hero / Banner Principal -->
-      <section class="hero-section">
-        <div class="hero-content">
-          <h1>Inicio</h1>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur perspiciatis laborum debitis dolore accusamus est ex ad beatae, porro dolor, cupiditate doloremque facere magni libero blanditiis dolorem. Quia, quasi illo.,<br />
-            Hola mundo.
-          </p>
-          <a href="#" class="btn-hero">Comenzar</a>
-        </div>
-      </section>
-
-      <!-- Contenedor Principal en Cuadrícula (2 columnas) -->
-      <section class="main-grid-container">
-        <!-- Columna Izquierda: Nuevos Recursos -->
-        <div class="recursos-section">
-          <h2>Recursos</h2>
-          <div class="cards-grid">
-            <!-- Tarjeta 1 -->
-            <article class="tarjeta">
-              <img
-                src="/src/IMG/Historia Hollow Knight.jpg"
-                alt="Vista previa del primer recurso CSS"
-                loading="lazy"
-              />
-              <h3>Historia</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipiscing elit, sed do
-                eiusmod tempor...
-              </p>
-              <a href="#" class="card-link">Explorar más</a>
-            </article>
-
-            <!-- Tarjeta 2 -->
-            <article class="tarjeta">
-              <img
-                src="/src/IMG/Lenguajes-Motores Hollow Knight.jpg"
-                alt="Vista previa del segundo recurso CSS"
-                loading="lazy"
-              />
-              <h3>Herramientas</h3>
-              <p>
-                Varona gente conecqui champi sed neo-barroca adipiscing elite,
-                sed nonumai tempor...
-              </p>
-              <a href="#" class="card-link">Explorar más</a>
-            </article>
-          </div>
-        </div>
-
-        <!-- Columna Derecha: Reseña del Creador -->
-        <aside class="creator-aside">
-          <h2>Reseña del Creador</h2>
-          <div class="creator-card">
-            <img
-              src="/src/IMG/Hollow Knight Avatar.jpg"
-              alt="Avatar del creador de la plataforma"
-              class="creator-avatar"
-              loading="lazy"
-            />
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste autem ratione nihil eum neque, aut dolorum voluptatum aperiam asperiores odio nam incidunt maxime vel ea, doloremque ex. Aspernatur, provident debitis!</p>
-
-            <!-- Contenedor unificado de redes sociales -->
-            <div class="social-container">
-              <a
-                href="https://github.com"
-                target="_blank"
-                rel="noopener"
-                aria-label="GitHub"
-                class="social-link"
-              >
-                <i class="fa-brands fa-github"></i>
-                <span class="sr-only">GitHub</span>
-              </a>
-              <a
-                href="https://portal.utp.ac.pa"
-                target="_blank"
-                rel="noopener"
-                aria-label="Cuenta UTP"
-                class="social-link"
-              >
-                <i class="fa-solid fa-graduation-cap"></i>
-                <span class="sr-only">Cuenta UTP</span>
-              </a>
-              <a
-                href="https://www.playstation.com"
-                target="_blank"
-                rel="noopener"
-                aria-label="PlayStation"
-                class="social-link"
-              >
-                <i class="fa-solid fa-gamepad"></i>
-                <span class="sr-only">PlayStation</span>
-              </a>
+   <body>
+      <header>
+         <nav>
+            <div class="nav-group">
+               <div class="logo">
+                  <i class="fa-solid fa-gamepad"></i>
+               </div>
+               <ul class="nav-links">
+                  <li>
+                     <a href="index.html" class="activo" aria-current="page"
+                        >Inicio</a
+                     >
+                  </li>
+                  <li><a href="introduccion.html">Introducción</a></li>
+                  <li><a href="/src/historia.html">Historia</a></li>
+                  <li><a href="herramientas.html">Herramientas</a></li>
+               </ul>
             </div>
-          </div>
-        </aside>
-      </section>
-    </main>
+            <div class="btns">
+               <a href="creador.html" class="btn">Yo</a>
+            </div>
+         </nav>
+      </header>
 
-    <footer>
-      <div class="footer-container">
-        <div class="footer-section">
-          <h3>Quick Links</h3>
-          <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="pagina.html">Pagina1</a></li>
-            <li><a href="pagina2.html">Pagina2</a></li>
-          </ul>
-        </div>
+      <main>
+         <!-- Hero / Banner Principal -->
+         <section class="hero-section">
+            <div class="hero-content">
+               <h1>Inicio</h1>
+               <p>
+                  Bienvenido a este pequeño rincón dedicado a los videojuegos.
+                  Aquí no solo vamos a hablar de títulos icónicos, sino de cómo
+                  nació todo, de las herramientas que usan los desarrolladores y
+                  de las historias que hay detrás de cada pantalla. Prepárate
+                  para un recorrido que va desde los osciloscopios de
+                  laboratorio hasta los motores gráficos actuales. Hola mundo… y
+                  bienvenido al juego.
+               </p>
+               <a href="introduccion.html" class="btn-hero">Comenzar</a>
+            </div>
+         </section>
 
-        <div class="footer-section">
-          <h3>Navegación</h3>
-          <ul>
-            <li><a href="pagina.html">Pagina1</a></li>
-            <li><a href="pagina2.html">Pagina2</a></li>
-            <li><a href="pagina3.html">Pagina3</a></li>
-          </ul>
-        </div>
+         <!-- Contenedor Principal en Cuadrícula (2 columnas) -->
+         <section class="main-grid-container">
+            <!-- Columna Izquierda: Nuevos Recursos -->
+            <div class="recursos-section">
+               <h2>Recursos</h2>
+               <div class="cards-grid">
+                  <!-- Tarjeta 1 -->
+                  <article class="tarjeta">
+                     <img
+                        src="/src/IMG/Historia Hollow Knight.jpg"
+                        alt="Vista previa del primer recurso CSS"
+                        loading="lazy"
+                     />
+                     <h3>Historia</h3>
+                     <p>
+                        Un recorrido crítico a través de las eras doradas y
+                        oscuras de la industria, examinando cómo los hitos
+                        tecnológicos transformaron el medio interactivo.
+                     </p>
+                     <a href="historia.html" class="card-link">Explorar más</a>
+                  </article>
 
-        <div class="footer-section">
-          <h3>ENlaces de mis redes</h3>
-          <ul>
-            <li><a href="#">Mi GitHub</a></li>
-            <li><a href="#">Cuenta de UTP</a></li>
-            <li><a href="#">Parcial 2</a></li>
-          </ul>
-        </div>
+                  <!-- Tarjeta 2 -->
+                  <article class="tarjeta">
+                     <img
+                        src="/src/IMG/Lenguajes-Motores Hollow Knight.jpg"
+                        alt="Vista previa del segundo recurso CSS"
+                        loading="lazy"
+                     />
+                     <h3>Herramientas</h3>
+                     <p>
+                        Los lenguajes y motores que dan vida a los juegos. Desde
+                        C++ y Unity hasta GDScript y Godot, un recorrido por las
+                        herramientas que usan tanto estudios AAA como
+                        desarrolladores independientes.
+                     </p>
+                     <a href="herramientas.html" class="card-link"
+                        >Explorar más</a
+                     >
+                  </article>
+               </div>
+            </div>
 
-        <div class="footer-section">
-          <h3>Mis Redes</h3>
-          <!-- Reutilizamos la misma clase social-container -->
-          <div class="social-container">
-            <a
-              href="https://github.com"
-              target="_blank"
-              rel="noopener"
-              aria-label="GitHub"
-              class="social-link"
-            >
-              <i class="fa-brands fa-github"></i>
-              <span class="sr-only">GitHub</span>
-            </a>
-            <a
-              href="https://portal.utp.ac.pa"
-              target="_blank"
-              rel="noopener"
-              aria-label="Cuenta UTP"
-              class="social-link"
-            >
-              <i class="fa-solid fa-graduation-cap"></i>
-              <span class="sr-only">Cuenta UTP</span>
-            </a>
-            <a
-              href="https://www.playstation.com"
-              target="_blank"
-              rel="noopener"
-              aria-label="PlayStation"
-              class="social-link"
-            >
-              <i class="fa-solid fa-gamepad"></i>
-              <span class="sr-only">PlayStation</span>
-            </a>
-          </div>
-        </div>
-      </div>
+            <!-- Columna Derecha: Reseña del Creador -->
+            <aside class="creator-aside">
+               <h2>Reseña del Creador</h2>
+               <div class="creator-card">
+                  <img
+                     src="/src/IMG/Hollow Knight Avatar.jpg"
+                     alt="Avatar del creador de la plataforma"
+                     class="creator-avatar"
+                     loading="lazy"
+                  />
+                  <p>
+                     Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                     Iste autem ratione nihil eum neque, aut dolorum voluptatum
+                     aperiam asperiores odio nam incidunt maxime vel ea,
+                     doloremque ex. Aspernatur, provident debitis!
+                  </p>
 
-      <div class="footer-bottom">
-        <h3>&copy; Universidad Tecnológica de Panamá</h3>
-      </div>
-    </footer>
-  </body>
+                  <!-- Contenedor unificado de redes sociales -->
+                  <div class="social-container">
+                     <a
+                        href="https://github.com"
+                        target="_blank"
+                        rel="noopener"
+                        aria-label="GitHub"
+                        class="social-link"
+                     >
+                        <i class="fa-brands fa-github"></i>
+                        <span class="sr-only">GitHub</span>
+                     </a>
+                     <a
+                        href="https://portal.utp.ac.pa"
+                        target="_blank"
+                        rel="noopener"
+                        aria-label="Cuenta UTP"
+                        class="social-link"
+                     >
+                        <i class="fa-solid fa-graduation-cap"></i>
+                        <span class="sr-only">Cuenta UTP</span>
+                     </a>
+                     <a
+                        href="https://www.playstation.com"
+                        target="_blank"
+                        rel="noopener"
+                        aria-label="PlayStation"
+                        class="social-link"
+                     >
+                        <i class="fa-solid fa-gamepad"></i>
+                        <span class="sr-only">PlayStation</span>
+                     </a>
+                  </div>
+               </div>
+            </aside>
+         </section>
+      </main>
+
+      <footer>
+         <div class="footer-container">
+            <div class="footer-section">
+               <h3>Navegación Principal</h3>
+               <ul>
+                  <li><a href="index.html">Inicio</a></li>
+                  <li><a href="introduccion.html">Introducción</a></li>
+                  <li><a href="historia.html">Historia</a></li>
+                  <li><a href="herramientas.html">Herramientas</a></li>
+               </ul>
+            </div>
+
+            <div class="footer-section">
+               <h3>Perfil y Autor</h3>
+               <ul>
+                  <li><a href="creador.html">Sobre mi persona</a></li>
+                  <li>
+                     <a href="creador.html#recursos-utilizados"
+                        >Bitácora y Recursos</a
+                     >
+                  </li>
+               </ul>
+            </div>
+
+            <div class="footer-section">
+               <h3>Enlaces de Interés</h3>
+               <ul>
+                  <li>
+                     <a href="https://github.com" target="_blank" rel="noopener"
+                        >Mi GitHub</a
+                     >
+                  </li>
+                  <li>
+                     <a
+                        href="https://portal.utp.ac.pa"
+                        target="_blank"
+                        rel="noopener"
+                        >Cuenta UTP</a
+                     >
+                  </li>
+                  <li><a href="#">Parcial 2</a></li>
+               </ul>
+            </div>
+
+            <div class="footer-section">
+               <h3>Mis Redes</h3>
+               <!-- Reutilizamos la misma clase social-container -->
+               <div class="social-container">
+                  <a
+                     href="https://github.com"
+                     target="_blank"
+                     rel="noopener"
+                     aria-label="GitHub"
+                     class="social-link"
+                  >
+                     <i class="fa-brands fa-github"></i>
+                     <span class="sr-only">GitHub</span>
+                  </a>
+                  <a
+                     href="https://portal.utp.ac.pa"
+                     target="_blank"
+                     rel="noopener"
+                     aria-label="Cuenta UTP"
+                     class="social-link"
+                  >
+                     <i class="fa-solid fa-graduation-cap"></i>
+                     <span class="sr-only">Cuenta UTP</span>
+                  </a>
+                  <a
+                     href="https://www.playstation.com"
+                     target="_blank"
+                     rel="noopener"
+                     aria-label="PlayStation"
+                     class="social-link"
+                  >
+                     <i class="fa-solid fa-gamepad"></i>
+                     <span class="sr-only">PlayStation</span>
+                  </a>
+               </div>
+            </div>
+         </div>
+
+         <div class="footer-bottom">
+            <h3>&copy; Universidad Tecnológica de Panamá</h3>
+         </div>
+      </footer>
+   </body>
 </html>

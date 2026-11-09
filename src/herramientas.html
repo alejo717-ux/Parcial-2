@@ -18,24 +18,26 @@
    <body class="page-herramientas">
       <header>
          <nav>
-            <ul class="nav-links">
-               <li><a href="index.html">Inicio</a></li>
-               <li><a href="historia.html">Historia</a></li>
-            </ul>
-
-            <div class="logo">Videojuegos</div>
-
-            <ul class="nav-links">
-               <li>
-                  <a href="pagina2.html" class="activo" aria-current="page"
-                     >Herramientas</a
-                  >
-               </li>
-               <li><a href="pagina3.html">Pagina3</a></li>
-            </ul>
-
+            <div class="nav-group">
+               <div class="logo">
+                  <i class="fa-solid fa-gamepad"></i>
+               </div>
+               <ul class="nav-links">
+                  <li><a href="index.html">Inicio</a></li>
+                  <li><a href="introduccion.html">Introducción</a></li>
+                  <li><a href="/src/historia.html">Historia</a></li>
+                  <li>
+                     <a
+                        href="herramientas.html"
+                        class="activo"
+                        aria-current="page"
+                        >Herramientas</a
+                     >
+                  </li>
+               </ul>
+            </div>
             <div class="btns">
-               <button class="btn">Yo</button>
+               <a href="creador.html" class="btn">Yo</a>
             </div>
          </nav>
       </header>
@@ -49,16 +51,10 @@
                videojuegos.
             </p>
 
-
             <h2 class="hall-category-title">Lenguajes de Programación</h2>
             <div class="cards-grid hall-grid">
-
                <article class="tarjeta">
-                  <img
-                     src="/src/IMG/c++.jpg"
-                     alt="C++"
-                     loading="lazy"
-                  />
+                  <img src="/src/IMG/c++.jpg" alt="C++" loading="lazy" />
                   <h3>C++</h3>
                   <p>
                      El estándar de la industria para motores de alto
@@ -67,11 +63,7 @@
                </article>
 
                <article class="tarjeta">
-                  <img
-                     src="/src/IMG/Char.png"
-                     alt="C#"
-                     loading="lazy"
-                  />
+                  <img src="/src/IMG/Char.png" alt="C#" loading="lazy" />
                   <h3>C#</h3>
                   <p>
                      Lenguaje versátil y potente, pilar fundamental del motor
@@ -132,12 +124,10 @@
                </article>
             </div>
 
-
             <h2 class="hall-category-title" style="margin-top: 3.5rem">
                Motores de Videojuegos
             </h2>
             <div class="cards-grid hall-grid">
-
                <article class="tarjeta">
                   <img
                      src="/src/IMG/Unity logo.png"
@@ -204,11 +194,7 @@
                </article>
 
                <article class="tarjeta">
-                  <img
-                     src="/src/IMG/Defold.webp"
-                     alt="Defold"
-                     loading="lazy"
-                  />
+                  <img src="/src/IMG/Defold.webp" alt="Defold" loading="lazy" />
                   <h3>Defold</h3>
                   <p>
                      Motor robusto enfocado en la multiplataforma con un

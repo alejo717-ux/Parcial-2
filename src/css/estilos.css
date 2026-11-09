@@ -1,44 +1,43 @@
+/* Body */
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	font-family: "Segoe UI", sans-serif;
 }
 
 body {
 	font-family: "Poppins", "Segoe UI", sans-serif;
-	margin: 0;
-	padding: 0;
 	background-color: #0b1120;
+	color: #e2e8f0;
 	display: flex;
 	flex-direction: column;
 	min-height: 100vh;
 }
 
+/* el header mas el NAVBAR */
 header {
 	width: 100%;
-	color: white;
 	position: relative;
 	z-index: 20;
 	background: transparent;
 }
 
-header,
-footer {
-	width: 100%;
-	color: white;
-}
-
 nav {
+	width: 100%;
 	padding: 1rem 5%;
 	background: rgba(15, 23, 42, 0.4);
 	border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 	backdrop-filter: blur(16px);
-	margin-bottom: 2rem;
 	display: flex;
 	align-items: center;
-	justify-content: center;
-	gap: 3rem;
+	justify-content: space-between;
+	gap: 1rem;
+}
+
+.nav-group {
+	display: flex;
+	align-items: center;
+	gap: 2rem;
 }
 
 .logo {
@@ -68,6 +67,24 @@ nav {
 	text-shadow: 0 0 10px #38bdf8;
 }
 
+/* Para la página activa */
+.nav-links li a.activo {
+	color: #38bdf8;
+	text-shadow: 0 0 12px rgba(56, 189, 248, 0.6);
+}
+
+.nav-links li a.activo::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: -6px;
+	width: 100%;
+	height: 2px;
+	background: #38bdf8;
+	border-radius: 2px;
+	box-shadow: 0 0 8px #38bdf8;
+}
+
 .btn {
 	padding: 0.5rem 1.5rem;
 	border-radius: 30px;
@@ -79,6 +96,8 @@ nav {
 	border: none;
 	cursor: pointer;
 	transition: 0.3s;
+	text-decoration: none;
+	white-space: nowrap;
 }
 
 .btn:hover {
@@ -86,18 +105,116 @@ nav {
 	box-shadow: 0 0 25px #0aa9f3;
 }
 
+/* modificando el main */
 main {
 	flex: 1;
 	display: flex;
 	flex-direction: column;
-	gap: 0;
-	padding: 0;
-	view-transition-name: contenido-pagina;
 }
 
+/* mejorando el footer*/
+footer {
+	position: relative;
+	color: white;
+	border-top: 1px solid #3e403b;
+	background-image: url(/src/IMG/Hollow\ Knight.png);
+	background-size: cover;
+	background-position: center bottom;
+	background-repeat: no-repeat;
+}
+
+footer::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	background: rgba(0, 4, 11, 0.806);
+	backdrop-filter: blur(16px);
+	z-index: 0;
+}
+
+.footer-container,
+.footer-bottom {
+	position: relative;
+	z-index: 1;
+}
+
+.footer-container {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 2rem;
+	padding: 2rem 5%;
+	max-width: 1400px;
+	margin: 0 auto;
+}
+
+.footer-container h3 {
+	font-size: 1.1rem;
+	color: #ffffff;
+	margin-bottom: 1rem;
+}
+
+.footer-section ul {
+	list-style: none;
+}
+
+.footer-section ul li a {
+	color: #cbd5e1;
+	text-decoration: none;
+	font-size: 0.95rem;
+	transition: 0.3s;
+	display: block;
+	margin-bottom: 0.4rem;
+}
+
+.footer-section ul li a:hover {
+	color: #38bdf8;
+	text-shadow: 0 0 10px #38bdf8;
+}
+
+.footer-bottom {
+	padding: 1rem 0;
+	border-top: 1px solid rgba(255, 255, 255, 0.1);
+	text-align: center;
+}
+
+.footer-bottom h3 {
+	font-size: 0.95rem;
+	color: #cbd5e1;
+	font-weight: 400;
+}
+
+/* dando una mejor visión a mis redes sociales */
+.social-container {
+	display: flex;
+	gap: 1.4rem;
+	align-items: center;
+}
+
+footer .social-container {
+	justify-content: flex-start;
+}
+
+.social-link {
+	color: #cbd5e1;
+	font-size: 1.3rem;
+	text-decoration: none;
+	transition: 0.3s;
+}
+
+.social-link:hover {
+	color: #38bdf8;
+	text-shadow: 0 0 10px #38bdf8;
+	transform: translateY(-3px);
+}
+
+.sr-only {
+	display: none;
+}
+
+/* estilizando el hero de index */
 .hero-section {
 	text-align: left;
-	padding: 14rem 8% 8rem 14.2%;
+	padding: 14rem 8% 11rem 14.2%;
 	margin-top: -70px;
 	background-image: url(/src/IMG/Hollow\ Knight.png);
 	background-size: cover;
@@ -106,13 +223,25 @@ main {
 	min-height: 85vh;
 }
 
+.hero-section::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	background: rgba(21, 21, 40, 0.333);
+	z-index: 0;
+}
+
+.hero-content {
+	position: relative;
+	z-index: 1;
+}
+
 .hero-content h1 {
 	font-size: clamp(2.5rem, 5vw, 3.5rem);
 	font-weight: 700;
 	color: #38bdf8;
 	margin-bottom: 1rem;
-	text-shadow: 0 0 20px rgba(56, 189, 248, 0.4);
-	letter-spacing: -0.5px;
+	text-shadow: 0 0 20px rgba(6, 37, 51, 0.4);
 }
 
 .hero-content p {
@@ -133,10 +262,7 @@ main {
 	color: #0f172a;
 	text-decoration: none;
 	box-shadow: 0 0 18px rgba(56, 189, 248, 0.55);
-	transition:
-		background 0.3s,
-		box-shadow 0.3s,
-		transform 0.2s;
+	transition: 0.3s;
 }
 
 .btn-hero:hover {
@@ -149,9 +275,8 @@ main {
 	display: grid;
 	grid-template-columns: 2fr 1fr;
 	gap: 2.5rem;
-	align-items: start;
+	padding: 4rem 8%;
 	background-color: #0b1120;
-	padding: 4rem 14%;
 }
 
 .recursos-section h2,
@@ -159,12 +284,6 @@ main {
 	font-size: 1.4rem;
 	color: #ffffff;
 	margin-bottom: 1.2rem;
-	font-weight: 600;
-}
-
-.recursos-section h3 {
-	color: #ffffff;
-	padding-bottom: 1rem;
 }
 
 .cards-grid {
@@ -177,14 +296,10 @@ main {
 .creator-card {
 	background: rgba(47, 56, 78, 0.178);
 	backdrop-filter: blur(18px) saturate(140%);
-	-webkit-backdrop-filter: blur(18px) saturate(140%);
 	border: 1px solid rgba(255, 255, 255, 0.12);
 	border-radius: 16px;
 	padding: 2rem 1.5rem;
-	transition:
-		transform 0.3s ease,
-		border-color 0.3s ease,
-		box-shadow 0.3s ease;
+	transition: 0.3s ease;
 }
 
 .tarjeta:hover,
@@ -215,7 +330,6 @@ main {
 	text-decoration: none;
 	font-weight: 600;
 	font-size: 0.9rem;
-	transition: color 0.2s;
 }
 
 .card-link:hover {
@@ -225,7 +339,6 @@ main {
 
 .creator-card {
 	text-align: center;
-	padding: 2rem 1.5rem;
 }
 
 .creator-avatar {
@@ -238,132 +351,7 @@ main {
 	box-shadow: 0 0 18px rgba(56, 189, 248, 0.4);
 }
 
-.social-container {
-	display: flex;
-	justify-content: center;
-	gap: 1.4rem;
-	margin-top: 1.3rem;
-	align-items: center;
-}
-/* Para evitar que el justify-content: center anterior cause TOC*/
-footer .social-container {
-	justify-content: flex-start;
-}
-
-.social-link {
-	color: #cbd5e1;
-	font-size: 1.3rem;
-	text-decoration: none;
-	display: inline-flex;
-	align-items: center;
-	transition:
-		color 0.3s,
-		text-shadow 0.3s,
-		transform 0.2s;
-}
-
-.social-link:hover {
-	color: #38bdf8;
-	text-shadow: 0 0 10px #38bdf8;
-	transform: translateY(-3px);
-}
-
-.sr-only {
-	display: none;
-}
-
-@media (max-width: 900px) {
-	.main-grid-container {
-		grid-template-columns: 1fr;
-	}
-
-	.hero-section {
-		padding: 3rem 0.5rem 2rem;
-	}
-}
-
-footer {
-	position: relative;
-	font-size: 22px;
-	color: white;
-	border-top: 1px solid #3e403b;
-	background-image: url(/src/IMG/Hollow\ Knight.png);
-	background-size: cover;
-	background-position: center bottom;
-	background-repeat: no-repeat;
-}
-
-footer::before {
-	content: "";
-	position: absolute;
-	inset: 0;
-	background: rgba(15, 23, 42, 0.75);
-	backdrop-filter: blur(20px);
-	-webkit-backdrop-filter: blur(20px);
-	z-index: 0;
-}
-
-.footer-container,
-.footer-bottom {
-	position: relative;
-	z-index: 1;
-}
-
-.footer-container {
-	display: grid;
-	grid-template-columns: repeat(4, 200px);
-	justify-content: center;
-	column-gap: 20px;
-	padding: 1rem 40px;
-}
-
-.footer-container h3 {
-	font-size: 1.1rem;
-	color: #ffffff;
-	margin-bottom: 1rem;
-}
-
-.footer-section ul {
-	list-style: none;
-}
-
-.footer-section ul li a,
-.footer-section p {
-	color: #cbd5e1;
-	text-decoration: none;
-	font-size: 0.95rem;
-	transition: 0.3s;
-}
-
-.footer-section ul li a:hover {
-	color: #38bdf8;
-	text-shadow: 0 0 10px #38bdf8;
-}
-
-.footer-bottom {
-	padding: 0.5rem 0;
-	border-top: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.footer-bottom h3 {
-	font-size: 0.95rem;
-	color: #cbd5e1;
-	font-weight: 400;
-	text-align: center;
-}
-
-.footer-social-icons {
-	display: flex;
-	gap: 1.2rem;
-	margin-top: 0.8rem;
-	align-items: center;
-}
-
-.footer-social-icons a span {
-	display: none;
-}
-
-/* PAGINA INTRODUCTORIA */
+/* estilizando introducción */
 .intro-hero.with-bg,
 .cta-section.with-bg {
 	position: relative;
@@ -387,7 +375,7 @@ footer::before {
 	content: "";
 	position: absolute;
 	inset: 0;
-	background: rgba(11, 17, 32, 0.29);
+	background: rgba(11, 17, 32, 0.39);
 	z-index: 0;
 }
 
@@ -395,11 +383,6 @@ footer::before {
 .cta-section.with-bg > * {
 	position: relative;
 	z-index: 1;
-}
-
-.intro-hero {
-	padding: 10rem 10% 10rem;
-	text-align: left;
 }
 
 .intro-hero-content {
@@ -434,10 +417,6 @@ footer::before {
 	align-items: center;
 }
 
-.alt-layout .doc-container {
-	grid-template-columns: 1fr 1fr;
-}
-
 .doc-image img {
 	width: 100%;
 	height: 260px;
@@ -451,7 +430,6 @@ footer::before {
 	font-size: 1.8rem;
 	color: #ffffff;
 	margin-bottom: 1rem;
-	font-weight: 600;
 }
 
 .doc-text p {
@@ -463,12 +441,6 @@ footer::before {
 .cta-section {
 	padding: 5rem 10%;
 	text-align: center;
-	background: linear-gradient(
-		135deg,
-		rgba(56, 189, 248, 0.1) 0%,
-		rgba(11, 17, 32, 0.6) 100%
-	);
-	border-top: 1px solid rgba(56, 189, 248, 0.2);
 }
 
 .cta-content {
@@ -486,14 +458,13 @@ footer::before {
 	font-size: 1.05rem;
 	color: #94a3b8;
 	margin-bottom: 2rem;
-	line-height: 1.6;
 }
 
 .cta-buttons {
 	display: flex;
 	justify-content: center;
 	gap: 1.5rem;
-	flex-wrap: wrap; /*PENDIENTE*/
+	flex-wrap: wrap;
 }
 
 .cta-secondary {
@@ -509,19 +480,7 @@ footer::before {
 	box-shadow: 0 0 25px rgba(56, 189, 248, 0.4);
 }
 
-@media (max-width: 900px) {
-	.doc-container,
-	.alt-layout .doc-container {
-		grid-template-columns: 1fr;
-		gap: 2rem;
-	}
-
-	.alt-layout .doc-image {
-		order: -1;
-	}
-}
-
-/* Creamos una clase solamente para meter la imagen de fondo*/
+/* los estilos para la pagina historia*/
 body.page-historia {
 	background-image: url(/src/ANIMATION/Hollow\ Knight\ Animacion.gif);
 	background-position: center;
@@ -543,7 +502,6 @@ body.page-historia > * {
 	z-index: 1;
 }
 
-/* Vamos a acomodar las tarjetas con el mismo diseño de las cards del index PAGINA historia.html*/
 .timeline-section {
 	padding: 3rem 8% 5rem;
 	max-width: 900px;
@@ -569,8 +527,6 @@ body.page-historia > * {
 .timeline {
 	list-style: none;
 	position: relative;
-	padding: 0;
-	margin: 0;
 }
 
 .timeline::before {
@@ -594,24 +550,17 @@ body.page-historia > * {
 	margin-bottom: 2.2rem;
 }
 
-.timeline-item:last-child {
-	margin-bottom: 0;
-}
-
 .timeline-marker {
 	position: absolute;
 	left: 9px;
 	top: 28px;
 	width: 20px;
+	height: 20px;
 	border-radius: 50%;
 	background: #0b1120;
 	border: 3px solid #38bdf8;
 	box-shadow: 0 0 12px rgba(56, 189, 248, 0.6);
 	z-index: 2;
-}
-
-.timeline-card {
-	padding: 1.4rem 1.5rem;
 }
 
 .timeline-card time {
@@ -620,7 +569,6 @@ body.page-historia > * {
 	font-weight: 600;
 	color: #38bdf8;
 	margin-bottom: 0.35rem;
-	letter-spacing: 0.03em;
 }
 
 .timeline-card h3 {
@@ -634,11 +582,7 @@ body.page-historia > * {
 	margin-bottom: 1rem;
 }
 
-.timeline-card p {
-	margin-bottom: 0;
-}
-
-/* Seccion de los lenguajes y motores*/
+/* dandole un estilo a la pantalla de herramientas */
 body.page-herramientas {
 	background-image: url("/src/ANIMATION/hollow-knight-animation2.gif");
 	background-position: center;
@@ -686,12 +630,12 @@ body.page-herramientas > * {
 	font-size: 2.1rem;
 	color: #ffffff;
 	margin-bottom: 2.9rem;
-	font-weight: 400;
 	border-left: 5px solid #38bdf8;
 	padding-left: 0.75rem;
 }
 
 .hall-grid {
+	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	gap: 2.6rem;
 }
@@ -705,7 +649,7 @@ body.page-herramientas > * {
 	height: 110px;
 	object-fit: cover;
 	border-radius: 50%;
-	margin: 0 auto 1.2rem auto;
+	margin: 0 auto 1.2rem;
 	display: block;
 	border: 2px solid rgba(56, 189, 248, 0.4);
 	box-shadow: 0 0 15px rgba(56, 189, 248, 0.25);
@@ -716,9 +660,10 @@ body.page-herramientas > * {
 	font-size: 1.15rem;
 	margin-bottom: 1.2rem;
 	text-shadow: 0 0 25px #0aa9f3;
+	text-align: center;
 }
 
-/*LA PAGINA DE MI PERSONA*/
+/* estilizando la pagina de mi persona */
 .creator-hero-section {
 	padding: 6rem 10% 4rem;
 	max-width: 1400px;
@@ -737,10 +682,9 @@ body.page-herramientas > * {
 	font-weight: 700;
 	color: #ffffff;
 	margin-bottom: 1rem;
-	line-height: 1.2;
 }
 
-.creator-hero-text .highlight-name {
+.highlight-name {
 	color: #38bdf8;
 	text-shadow: 0 0 20px rgba(56, 189, 248, 0.4);
 }
@@ -760,12 +704,6 @@ body.page-herramientas > * {
 	margin-bottom: 1.5rem;
 }
 
-.creator-hero-visual {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
 .creator-main-avatar {
 	width: 279px;
 	height: 419px;
@@ -773,9 +711,7 @@ body.page-herramientas > * {
 	object-fit: cover;
 	border: 3px solid #38bdf8;
 	box-shadow: 0 0 20px rgba(56, 189, 248, 0.4);
-	transition:
-		transform 0.5s ease,
-		box-shadow 0.5s ease;
+	transition: 0.5s ease;
 }
 
 .creator-main-avatar:hover {
@@ -805,7 +741,6 @@ body.page-herramientas > * {
 	color: #94a3b8;
 	font-size: 1.05rem;
 	margin-bottom: 2.5rem;
-	line-height: 1.6;
 }
 
 .resources-content-box {
@@ -868,7 +803,55 @@ body.page-herramientas > * {
 	line-height: 1.6;
 }
 
+/* Para evitar que la pagina se ponga chueca entre diferentes pantallas*/
+@media (max-width: 1100px) {
+	.hall-grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
 @media (max-width: 900px) {
+	/* Navbar */
+	nav {
+		padding: 1rem 4%;
+		flex-wrap: wrap;
+	}
+
+	.nav-group {
+		gap: 1.2rem;
+	}
+
+	.nav-links {
+		gap: 1.2rem;
+	}
+
+	.nav-links li a {
+		font-size: 0.95rem;
+	}
+
+	/* Index */
+	.main-grid-container {
+		grid-template-columns: 1fr;
+		padding: 3rem 5%;
+	}
+
+	.hero-section {
+		padding: 8rem 5% 4rem;
+		min-height: 70vh;
+	}
+
+	/* Introducción */
+	.doc-container,
+	.alt-layout .doc-container {
+		grid-template-columns: 1fr;
+		gap: 2rem;
+	}
+
+	.alt-layout .doc-image {
+		order: -1;
+	}
+
+	/* Creador */
 	.creator-hero-grid {
 		grid-template-columns: 1fr;
 		text-align: center;
@@ -881,79 +864,149 @@ body.page-herramientas > * {
 		align-items: center;
 	}
 
-	.creator-hero-text .social-container {
-		justify-content: center !important;
-	}
-
-	.glowing-circle-bg {
-		width: 260px;
-		height: 260px;
-	}
-
 	.creator-main-avatar {
 		width: 220px;
 		height: 220px;
 	}
-}
 
-@media (max-width: 1100px) {
-	.hall-grid {
-		grid-template-columns: repeat(
-				2,
-				1fr
-			); /* Pasa automáticamente a 2 columnas para que no se aprieten */
+	/* Footer */
+	.footer-container {
+		grid-template-columns: repeat(2, 1fr);
+		gap: 2rem;
 	}
 }
 
 @media (max-width: 600px) {
-	.hall-grid {
-		grid-template-columns: 1fr; /* 1 columna en pantallas móviles */
+	/* Navbar móvil */
+	nav {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 1rem;
+		padding: 1rem 4%;
 	}
-}
 
-@media (max-width: 600px) {
+	.nav-group {
+		width: 100%;
+		justify-content: space-between;
+	}
+
+	.nav-links {
+		gap: 1rem;
+		flex-wrap: wrap;
+	}
+
+	.btns {
+		align-self: flex-end;
+	}
+
+	/* Hero */
+	.hero-section {
+		padding: 6rem 4% 3rem;
+	}
+
+	.hero-content h1 {
+		font-size: 2.2rem;
+	}
+
+	/* Hall of Fame */
+	.hall-grid {
+		grid-template-columns: 1fr;
+	}
+
+	/* Timeline */
 	.timeline-section {
 		padding: 2rem 1.2rem 4rem;
 	}
+
 	.timeline::before {
 		left: 12px;
 	}
+
 	.timeline-item {
 		padding-left: 42px;
 	}
+
 	.timeline-marker {
 		left: 3px;
 		width: 18px;
 		height: 18px;
 	}
+
+	/* Footer móvil */
+	.footer-container {
+		grid-template-columns: 1fr;
+		text-align: center;
+	}
+
+	footer .social-container {
+		justify-content: center;
+	}
 }
 
-/* Transiciones entre las páginas */
+/* Transiciones entre las paginas web del sitio web*/
+html {
+	scrollbar-gutter: stable;
+}
+
 @view-transition {
 	navigation: auto;
 }
 
-::view-transition-group(contenido-pagina) {
-	animation-duration: 1s;
-	animation-timing-function: ease;
-}
-
-::view-transition-old(contenido-pagina) {
-	animation-name: slide-out;
-}
-
-::view-transition-new(contenido-pagina) {
-	animation-name: slide-in;
-}
-
-@keyframes slide-out {
-	to {
-		translate: -100vw;
+@media (prefers-reduced-motion: no-preference) {
+	::view-transition-group(root) {
+		animation-duration: 0.45s;
+		animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 	}
-}
 
-@keyframes slide-in {
-	from {
-		translate: -100vw;
+	::view-transition-old(root) {
+		animation:
+			fade-out 0.35s ease-out both,
+			slide-out 0.45s cubic-bezier(0.4, 0, 0.2, 1) both;
+	}
+
+	::view-transition-new(root) {
+		animation:
+			fade-in 0.4s ease-in both,
+			slide-in 0.45s cubic-bezier(0.4, 0, 0.2, 1) both;
+	}
+
+	@keyframes slide-out {
+		to {
+			transform: translateX(-30px);
+			opacity: 0;
+		}
+	}
+
+	@keyframes slide-in {
+		from {
+			transform: translateX(30px);
+			opacity: 0;
+		}
+	}
+
+	@keyframes fade-out {
+		to {
+			opacity: 0;
+		}
+	}
+
+	@keyframes fade-in {
+		from {
+			opacity: 0;
+		}
+	}
+
+	/* Transiciones de elementos específicos */
+	.creator-main-avatar {
+		view-transition-name: avatar-perfil;
+	}
+
+	.tarjeta {
+		view-transition-name: tarjeta-efecto;
+	}
+
+	::view-transition-group(avatar-perfil),
+	::view-transition-group(tarjeta-efecto) {
+		animation-duration: 0.4s;
 	}
 }
