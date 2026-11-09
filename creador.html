@@ -27,38 +27,38 @@
                   <li><a href="introduccion.html">Introducción</a></li>
                   <li><a href="historia.html">Historia</a></li>
                   <li><a href="herramientas.html">Herramientas</a></li>
+                  <li>
+                     <a href="creador.html" class="activo" aria-current="page"
+                        >Perfil</a
+                     >
+                  </li>
                </ul>
             </div>
             <div class="btns">
-               <a href="creador.html" class="btn">Yo</a>
+               <a href="creador.html" class="btn activo">Mi Reseña</a>
             </div>
          </nav>
       </header>
 
       <main>
-         <section class="creator-hero-section with-bg">
+         <section class="creator-hero-section">
             <div class="creator-hero-grid">
-               <!-- Columna Izquierda: Textos e Información -->
                <div class="creator-hero-text">
                   <h1>
                      Hola, Soy <span class="highlight-name">Alejandro</span>
                   </h1>
-                  <p class="creator-subtitle">Estudiante de la UTP</p>
+                  <p class="creator-subtitle">Estudiante novato de la programación</p>
                   <p class="creator-description">
-                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                     Quidem voluptates est dolore laborum harum. Omnis eaque,
-                     aperiam necessitatibus officiis obcaecati cupiditate
-                     mollitia aut, iusto vel deserunt porro tempora corporis
-                     illum.
+                     Este proyecto nació como un trabajo académico, pero en mi
+                     opinión como gamer se transformó en una forma de organizar
+                     todo lo que me gusta de los videojuegos: su historia, las
+                     herramientas con las que se construyen y los hilos de
+                     historia que hay detrás de ellos
                   </p>
 
-                  <!-- Redes sociales -->
-                  <div
-                     class="social-container"
-                     style="justify-content: flex-start; margin-top: 1.5rem"
-                  >
+                  <div class="social-container social-left">
                      <a
-                        href="https://github.com"
+                        href="https://github.com/alejo717-ux"
                         target="_blank"
                         rel="noopener"
                         aria-label="GitHub"
@@ -68,7 +68,7 @@
                         <span class="sr-only">GitHub</span>
                      </a>
                      <a
-                        href="https://portal.utp.ac.pa"
+                        href="https://matricula.utp.ac.pa/mprematr/menu/inicio/2026/QVnknjeeilWZaVnQiYVOhOOe$Pjk"
                         target="_blank"
                         rel="noopener"
                         aria-label="Cuenta UTP"
@@ -78,31 +78,40 @@
                         <span class="sr-only">Cuenta UTP</span>
                      </a>
                      <a
-                        href="https://www.playstation.com"
+                        href="https://steamcommunity.com/profiles/76561199129849721"
                         target="_blank"
                         rel="noopener"
-                        aria-label="PlayStation"
+                        aria-label="Steam"
                         class="social-link"
                      >
                         <i class="fa-solid fa-gamepad"></i>
-                        <span class="sr-only">PlayStation</span>
+                        <span class="sr-only">Steam</span>
                      </a>
                   </div>
 
-                  <div style="margin-top: 2rem">
-                     <a href="#recursos-utilizados" class="btn-hero"
-                        >Ver Recursos y Guías</a
-                     >
+                  <div class="creator-cta">
+                     <a href="#recursos-utilizados" class="btn-hero">
+                        Ver Recursos y Guías
+                     </a>
                   </div>
                </div>
 
+               <!-- Columna derecha: Avatar con cambio automático -->
                <div class="creator-hero-visual">
-                  <img
-                     src="IMG/Hollow Knight Avatar.jpg"
-                     alt="Avatar del Creador"
-                     class="creator-main-avatar"
-                     loading="lazy"
-                  />
+                  <div class="avatar-swap">
+                     <img
+                        src="IMG/Hollow Knight Avatar.jpg"
+                        alt="Avatar del Creador"
+                        class="creator-main-avatar avatar-1"
+                        loading="lazy"
+                     />
+                     <img
+                        src="IMG/fotoYo.jpg"
+                        alt="Avatar del Creador alternativo"
+                        class="creator-main-avatar avatar-2"
+                        loading="lazy"
+                     />
+                  </div>
                </div>
             </div>
          </section>
@@ -117,67 +126,109 @@
                </p>
 
                <div class="resources-content-box">
+                  <!-- 1. Recursos -->
                   <div class="resource-group">
                      <h3><i class="fa-solid fa-video"></i> Recursos</h3>
                      <ul>
                         <li>
-                           <strong>Fuentes</strong>
-                           <a
-                              href="https://www.youtube.com/watch?v=-u3vE84Wo_U&t=584s"
-                              target="_blank"
-                              rel="noopener"
-                           >
-                              Enlace
-                           </a>
-                           <span
-                              >- Lorem ipsum dolor sit, amet consectetur
-                              adipisicing elit. Amet inventore facilis libero
-                              aliquam nemo voluptas laudantium commodi repellat
-                              corrupti! Odio ut illo incidunt delectus
-                              doloremque cumque optio libero iusto nisi!</span
-                           >
+                           <strong>YouTubers recomendados / Enlaces</strong>
+                           <ul class="nested-list">
+                              <li>
+                                 <strong>BaityBait</strong> — Un recorrido al
+                                 mundo de los videojuegos.
+                              </li>
+                              <li>
+                                 <strong>Merluso</strong> — Historias de
+                                 empresas, fallos y evolución tecnológica.
+                              </li>
+                              <li>
+                                 <strong>Joseju</strong> — Ensayos y reflexiones
+                                 sobre diseño, mecánicas y la experiencia de
+                                 jugar.
+                                 <br />
+                                 <br />
+                                 <a
+                                    href="https://www.youtube.com/watch?v=-rn8FI9Ylsg&t=706s"
+                                    target="_blank"
+                                    rel="noopener"
+                                 >
+                                    El BIG DATA en los videojuegos
+                                 </a>
+                                 ·
+                                 <a
+                                    href="https://www.youtube.com/watch?v=c9uZO8AVoHw"
+                                    target="_blank"
+                                    rel="noopener"
+                                 >
+                                    ¿Son arte los videojuegos?
+                                 </a>
+                                 ·
+                                 <a
+                                    href="https://www.youtube.com/watch?v=GB5X_Zjn8rc"
+                                    target="_blank"
+                                    rel="noopener"
+                                 >
+                                    Cómo NO hacer un videojuego
+                                 </a>
+                              </li>
+                           </ul>
+                        </li>
+                        <li>
+                           <strong>Artículos históricos</strong>
+                           — Fuentes sobre Tennis for Two, Spacewar!, Pong, la
+                           crisis de 1983 y el enterramiento de cartuchos de
+                           Atari.
                         </li>
                      </ul>
                   </div>
 
+                  <!-- 2. Herramientas y Software -->
                   <div class="resource-group">
                      <h3>
                         <i class="fa-solid fa-code"></i> Herramientas y Software
                      </h3>
                      <ul class="resource-list-inline">
                         <li>
-                           <strong>Editor:</strong> Visual Studio Code, con
-                           extensiones de formato y previsualización en tiempo
-                           real.
+                           <strong>Editor:</strong> Visual Studio Code (con
+                           extensiones de formato y previsualización).
                         </li>
                         <li>
-                           <strong>Control de Versiones:</strong> Git y GitHub,
-                           imprescindibles para no perder el trabajo, además del
-                           uso de scripts de automatización con la terminal de
-                           comandos y el bash.
+                           <strong>Control de versiones:</strong> Git y GitHub,
+                           junto con scripts de automatización en terminal y
+                           Bash.
                         </li>
                         <li>
-                           <strong>Diseño y Activos:</strong> inspiración visual
+                           <strong>Diseño y activos:</strong> Inspiración visual
                            tomada de la estética de Hollow Knight y de un
-                           ambiente oscuro y cyberpunk que me parece perfecto
-                           para este tipo de proyectos.
+                           ambiente oscuro / cyberpunk.
                         </li>
                      </ul>
                   </div>
 
+                  <!-- 3. Referencias y Documentación -->
                   <div class="resource-group">
                      <h3>
                         <i class="fa-solid fa-book"></i> Referencias y
                         Documentación
                      </h3>
                      <p>
-                        Además de las fuentes académicas y de documentación
-                        oficial de motores, he consultado artículos históricos,
-                        análisis de la industria y material de divulgación que
-                        me permitieron contrastar fechas, debates y contexto.
-                        Todo con el objetivo de que la información que
-                        encuentras aquí sea lo más clara y honestamente
-                        presentada posible. <strong>Apuntes</strong>.
+                        Documentación oficial de motores (Unity, Unreal, Godot)
+                        y artículos técnicos sobre historia de los videojuegos,
+                        la crisis de 1983 y la transición del 2D al 3D.
+                     </p>
+                     <p class="apuntes">
+                        <strong>Apuntes personales:</strong><br />
+                        La parte más interesante de investigar este tema fue
+                        descubrir que no existe un “primer videojuego” claro.
+                        Tennis for Two, Spacewar! y OXO compiten por el título
+                        según la definición que se use. También me sorprendió lo
+                        cerca que estuvo la industria de desaparecer en 1983 y
+                        cómo Nintendo logró resucitarla con un enfoque muy
+                        distinto (calidad controlada y confianza del
+                        consumidor). Los videos de BaityBait y Merluso me
+                        ayudaron especialmente a entender el contexto
+                        industrial, mientras que Joseju aportó una mirada más
+                        cercana a la experiencia de jugar y al diseño.
                      </p>
                   </div>
                </div>
@@ -188,37 +239,60 @@
       <footer>
          <div class="footer-container">
             <div class="footer-section">
-               <h3>Quick Links</h3>
+               <h3>Navegación Principal</h3>
                <ul>
                   <li><a href="index.html">Inicio</a></li>
+                  <li><a href="introduccion.html">Introducción</a></li>
                   <li><a href="historia.html">Historia</a></li>
-                  <li><a href="pagina2.html">Pagina2</a></li>
+                  <li><a href="herramientas.html">Herramientas</a></li>
                </ul>
             </div>
 
             <div class="footer-section">
-               <h3>Navegación</h3>
+               <h3>Perfil y Autor</h3>
                <ul>
-                  <li><a href="historia.html">Historia</a></li>
-                  <li><a href="pagina2.html" class="activo">Pagina2</a></li>
-                  <li><a href="pagina3.html">Pagina3</a></li>
+                  <li><a href="creador.html">Sobre mi persona</a></li>
+                  <li>
+                     <a href="creador.html#recursos-utilizados"
+                        >Bitácora y Recursos</a
+                     >
+                  </li>
                </ul>
             </div>
 
             <div class="footer-section">
-               <h3>Enlaces de mis redes</h3>
+               <h3>Enlaces de Interés</h3>
                <ul>
-                  <li><a href="#">Mi GitHub</a></li>
-                  <li><a href="#">Cuenta de UTP</a></li>
-                  <li><a href="#">Parcial 2</a></li>
+                  <li>
+                     <a
+                        href="https://github.com/alejo717-ux"
+                        target="_blank"
+                        rel="noopener"
+                        >Mi GitHub</a
+                     >
+                  </li>
+                  <li>
+                     <a
+                        href="https://matricula.utp.ac.pa/mprematr/menu/inicio/2026/QVnknjeeilWZaVnQiYVOhOOe$Pjk"
+                        target="_blank"
+                        rel="noopener"
+                        >Cuenta UTP</a
+                     >
+                  </li>
+                  <li>
+                     <a href="https://github.com/alejo717-ux/Parcial-2"
+                        >Parcial 2</a
+                     >
+                  </li>
                </ul>
             </div>
 
             <div class="footer-section">
                <h3>Mis Redes</h3>
+
                <div class="social-container">
                   <a
-                     href="https://github.com"
+                     href="https://github.com/alejo717-ux"
                      target="_blank"
                      rel="noopener"
                      aria-label="GitHub"
@@ -228,7 +302,7 @@
                      <span class="sr-only">GitHub</span>
                   </a>
                   <a
-                     href="https://portal.utp.ac.pa"
+                     href="https://matricula.utp.ac.pa/mprematr/menu/inicio/2026/QVnknjeeilWZaVnQiYVOhOOe$Pjk"
                      target="_blank"
                      rel="noopener"
                      aria-label="Cuenta UTP"
@@ -238,14 +312,14 @@
                      <span class="sr-only">Cuenta UTP</span>
                   </a>
                   <a
-                     href="https://www.playstation.com"
+                     href="https://steamcommunity.com/profiles/76561199129849721"
                      target="_blank"
                      rel="noopener"
-                     aria-label="PlayStation"
+                     aria-label="Steam"
                      class="social-link"
                   >
                      <i class="fa-solid fa-gamepad"></i>
-                     <span class="sr-only">PlayStation</span>
+                     <span class="sr-only">Steam</span>
                   </a>
                </div>
             </div>

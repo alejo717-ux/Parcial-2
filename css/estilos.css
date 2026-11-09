@@ -117,7 +117,7 @@ footer {
 	position: relative;
 	color: white;
 	border-top: 1px solid #3e403b;
-	background-image: url(/IMG/Hollow\ Knight.png);
+	background-image: url(../IMG/Hollow\ Knight.png);
 	background-size: cover;
 	background-position: center bottom;
 	background-repeat: no-repeat;
@@ -183,6 +183,10 @@ footer::before {
 	font-weight: 400;
 }
 
+footer .social-container {
+	justify-content: flex-start;
+}
+
 /* dando una mejor visión a mis redes sociales */
 .social-container {
 	display: flex;
@@ -190,8 +194,8 @@ footer::before {
 	align-items: center;
 }
 
-footer .social-container {
-	justify-content: flex-start;
+.creator-card .social-container {
+    justify-content: center;
 }
 
 .social-link {
@@ -216,7 +220,7 @@ footer .social-container {
 	text-align: left;
 	padding: 14rem 8% 11rem 14.2%;
 	margin-top: -70px;
-	background-image: url(/IMG/Hollow\ Knight.png);
+	background-image: url(../IMG/Hollow\ Knight.png);
 	background-size: cover;
 	background-position: center top;
 	background-repeat: no-repeat;
@@ -363,11 +367,11 @@ footer .social-container {
 
 .intro-hero.with-bg {
 	margin-top: -70px;
-	background-image: url("/IMG/intro\ background.png");
+	background-image: url("../IMG/introduccionBG.png");
 }
 
 .cta-section.with-bg {
-	background-image: url("/IMG/Images-Gaming-Backgrounds-HD.jpg");
+	background-image: url("../ANIMATION/loop3.gif");
 }
 
 .intro-hero.with-bg::before,
@@ -482,7 +486,7 @@ footer .social-container {
 
 /* los estilos para la pagina historia*/
 body.page-historia {
-	background-image: url(/ANIMATION/Hollow\ Knight\ Animacion.gif);
+	background-image: url(../ANIMATION/Hollow\ Knight\ Animacion.gif);
 	background-position: center;
 	background-attachment: fixed;
 	background-size: cover;
@@ -584,7 +588,7 @@ body.page-historia > * {
 
 /* dandole un estilo a la pantalla de herramientas */
 body.page-herramientas {
-	background-image: url("/ANIMATION/hollow-knight-animation2.gif");
+	background-image: url("../ANIMATION/hollow-knight-animation2.gif");
 	background-position: center;
 	background-attachment: fixed;
 	background-size: cover;
@@ -704,14 +708,66 @@ body.page-herramientas > * {
 	margin-bottom: 1.5rem;
 }
 
-.creator-main-avatar {
+.social-left {
+	justify-content: flex-start;
+	margin-top: 1.5rem;
+}
+
+.creator-cta {
+	margin-top: 2rem;
+}
+
+.nested-list {
+	margin: 0.4rem 0 0.8rem 1.2rem;
+	display: flex;
+	flex-direction: column;
+	gap: 0.45rem;
+}
+
+.apuntes {
+	margin-top: 1rem;
+}
+
+.avatar-swap {
+	position: relative;
 	width: 279px;
 	height: 419px;
-	border-radius: 50%;
+	margin: 0 auto;
+}
+
+.avatar-swap .creator-main-avatar {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
 	object-fit: cover;
+	border-radius: 50%;
 	border: 3px solid #38bdf8;
 	box-shadow: 0 0 20px rgba(56, 189, 248, 0.4);
-	transition: 0.5s ease;
+}
+
+.avatar-1 {
+	animation: fadeAvatar 10s infinite;
+}
+
+.avatar-2 {
+	animation: fadeAvatar 10s infinite reverse;
+	opacity: 0;
+}
+
+@keyframes fadeAvatar {
+	0%,
+	45% {
+		opacity: 1;
+	}
+	50%,
+	95% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
 }
 
 .creator-main-avatar:hover {
