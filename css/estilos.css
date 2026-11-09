@@ -595,7 +595,7 @@ body.page-herramientas::before {
 	content: "";
 	position: fixed;
 	inset: 0;
-	background: rgba(21, 3, 33, 0.75);
+	background: rgba(52, 47, 22, 0.638);
 	z-index: 0;
 }
 
